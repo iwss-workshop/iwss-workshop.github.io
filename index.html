@@ -50,6 +50,40 @@
       width: auto;
       display: block;
     }
+    .committee-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      justify-items: center;
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    /* Force last row (2 people) centered */
+    .committee-grid .member:nth-child(4) {
+      grid-column: 1 / 2;
+    }
+    .committee-grid .member:nth-child(5) {
+      grid-column: 3 / 4;
+    }
+    
+    .member img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #e6e6e6;
+    }
+    
+    .member .name {
+      margin-top: 12px;
+      font-weight: 600;
+    }
+    
+    .member .affiliation {
+      font-size: 14px;
+      color: #555;
+    }
   </style>
 </head>
 <body>
@@ -298,6 +332,7 @@ The \textit{International Workshop on Structures to Stories: Multilingual NLP fo
 </body>
 
 </html>
+
 
 
 

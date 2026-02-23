@@ -246,26 +246,31 @@ The \textit{International Workshop on Structures to Stories: Multilingual NLP fo
   document.getElementById("y").textContent = new Date().getFullYear();
 
   // active tab highlighting on scroll
-  const links = [...document.querySelectorAll("nav a")];
-  const sections = links.map(a => document.querySelector(a.getAttribute("href")));
-
-  const obs = new IntersectionObserver((entries) => {
-    const visible = entries
-      .filter(e => e.isIntersecting)
-      .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
-    if (!visible) return;
-
-    links.forEach(a => a.classList.remove("active"));
-    const id = "#" + visible.target.id;
-    const active = links.find(a => a.getAttribute("href") === id);
-    if (active) active.classList.add("active");
-  }, { rootMargin: "-40% 0px -55% 0px", threshold: [0.1, 0.2, 0.3, 0.4, 0.5] });
-
-  sections.forEach(s => s && obs.observe(s));
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav a");
+  
+  window.addEventListener("scroll", () => {
+    let current = "";
+  
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+  
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
 </script>
 </body>
 
 </html>
+
 
 
 

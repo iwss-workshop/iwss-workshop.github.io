@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Workshop Title</title>
+  <style>
+    :root{
+      --maxw: 1000px;
+      --fg:#111; --muted:#555; --bg:#fff; --line:#e6e6e6; --link:#0b57d0;
+      --card:#fff; --soft:#fafafa;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--fg); background:var(--bg); line-height:1.5;
+      scroll-behavior:smooth;
+    }
+    header{position:sticky; top:0; z-index:10; border-bottom:1px solid var(--line); background:var(--soft);}
+    .navwrap{
+      max-width:var(--maxw); margin:0 auto; padding:14px 16px;
+      display:flex; gap:16px; align-items:center; justify-content:space-between;
+    }
+    .brand{font-weight:700; letter-spacing:.2px; white-space:nowrap;}
+    nav{display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end;}
+    nav a{
+      text-decoration:none; color:var(--fg); padding:8px 10px; border-radius:10px;
+      border:1px solid transparent; font-size:14px;
+    }
+    nav a:hover{border-color:var(--line); background:var(--card);}
+    nav a.active{border-color:#cfe0ff; background:#edf3ff; color:var(--link);}
+    main{max-width:var(--maxw); margin:0 auto; padding:26px 16px 60px;}
+    h1{margin:0 0 10px; font-size:28px;}
+    h2{margin:24px 0 10px; font-size:20px;}
+    p{margin:10px 0; color:var(--muted);}
+    .card{border:1px solid var(--line); border-radius:14px; padding:16px; background:var(--card);}
+    .grid{display:grid; grid-template-columns:1fr; gap:14px;}
+    @media(min-width:900px){ .grid{grid-template-columns:2fr 1fr;} }
+    ul{margin:8px 0 0 18px; color:var(--muted);}
+    a{color:var(--link);}
+    footer{border-top:1px solid var(--line); padding:18px 16px; color:var(--muted); font-size:14px;}
+    .footerwrap{max-width:var(--maxw); margin:0 auto;}
+    .table{width:100%; border-collapse:collapse; margin-top:8px;}
+    .table th,.table td{border-bottom:1px solid var(--line); padding:10px 8px; text-align:left; vertical-align:top;}
+    .badge{display:inline-block; padding:2px 8px; border-radius:999px; border:1px solid var(--line); background:#f7f7f7; font-size:12px; color:var(--muted);}
+    section{scroll-margin-top:88px;}
+    .small{font-size:14px;}
+  </style>
+</head>
+<body>
+<header>
+  <div class="navwrap">
+    <div class="brand">Workshop Title</div>
+    <nav>
+      <a class="active" href="#summary">Summary</a>
+      <a href="#topics">Topics</a>
+      <a href="#dates">Important Dates</a>
+      <a href="#cfp">Call for Papers</a>
+      <a href="#accepted">Accepted Papers</a>
+      <a href="#program">Program</a>
+      <a href="#committees">Committees</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- SUMMARY -->
+  <section id="summary">
+    <h1>Workshop Title</h1>
+    <p>
+      Replace this paragraph with a short description of the workshop: scope, goals, and intended audience.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Overview</h2>
+        <ul>
+          <li><b>Date:</b> TBD</li>
+          <li><b>Location:</b> TBD (co-located with Conference XYZ)</li>
+          <li><b>Format:</b> Half-day / Full-day / Hybrid</li>
+          <li><b>Contact:</b> <a href="mailto:workshop@domain.com">workshop@domain.com</a></li>
+        </ul>
+
+        <h2>News</h2>
+        <ul>
+          <li><span class="badge">Update</span> Call for Papers published.</li>
+          <li><span class="badge">Update</span> Important dates announced.</li>
+          <li><span class="badge">Update</span> Program coming soon.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Key Links</h2>
+        <ul>
+          <li><a href="#cfp">Call for Papers</a></li>
+          <li><a href="#dates">Important Dates</a></li>
+          <li><a href="#program">Program</a></li>
+        </ul>
+
+        <h2>Submission</h2>
+        <p class="small">Add your submission system link (OpenReview/CMT/EasyChair) and template link.</p>
+        <ul>
+          <li><a href="#">Submission site (TBD)</a></li>
+          <li><a href="#">Formatting instructions (TBD)</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOPICS -->
+  <section id="topics">
+    <h2>Topics</h2>
+    <div class="card">
+      <p>Topics of interest include (edit as needed):</p>
+      <ul>
+        <li>Topic A</li>
+        <li>Topic B</li>
+        <li>Topic C</li>
+        <li>Topic D</li>
+        <li>Topic E</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- IMPORTANT DATES -->
+  <section id="dates">
+    <h2>Important Dates</h2>
+    <div class="card">
+      <p>All deadlines are Anywhere on Earth (AoE) unless stated otherwise.</p>
+      <table class="table">
+        <thead>
+          <tr><th>Milestone</th><th>Date</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Paper submission deadline</td><td>TBD</td></tr>
+          <tr><td>Notification of acceptance</td><td>TBD</td></tr>
+          <tr><td>Camera-ready deadline</td><td>TBD</td></tr>
+          <tr><td>Workshop date</td><td>TBD</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- CFP -->
+  <section id="cfp">
+    <h2>Call for Papers</h2>
+    <div class="card">
+      <p>
+        Replace this text with your CFP: motivation, scope, types of submissions, and evaluation criteria.
+      </p>
+
+      <h3>Submission Instructions</h3>
+      <ul>
+        <li><b>Submission site:</b> <a href="#">TBD</a></li>
+        <li><b>Format:</b> PDF, anonymized (if applicable)</li>
+        <li><b>Page limit:</b> TBD</li>
+        <li><b>Template:</b> <a href="#">TBD</a></li>
+      </ul>
+
+      <h3>Review & Publication</h3>
+      <ul>
+        <li>Single-blind / Double-blind / TBD</li>
+        <li>Archival / Non-archival / TBD</li>
+        <li>Camera-ready instructions will be shared with accepted authors.</li>
+      </ul>
+
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:workshop@domain.com">workshop@domain.com</a></p>
+    </div>
+  </section>
+
+  <!-- ACCEPTED PAPERS -->
+  <section id="accepted">
+    <h2>Accepted Papers</h2>
+    <div class="card">
+      <p>This section will be updated after notifications.</p>
+      <ul>
+        <li><b>Paper Title</b> — Author 1, Author 2</li>
+        <li><b>Paper Title</b> — Author 1, Author 2</li>
+        <li><b>Paper Title</b> — Author 1, Author 2</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROGRAM -->
+  <section id="program">
+    <h2>Program</h2>
+    <div class="card">
+      <p>Times are shown in local workshop time zone (set this as needed).</p>
+      <table class="table">
+        <thead>
+          <tr><th>Time</th><th>Session</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>09:00–09:10</td><td>Welcome and opening remarks</td></tr>
+          <tr><td>09:10–10:00</td><td>Keynote (Speaker Name)</td></tr>
+          <tr><td>10:00–10:30</td><td>Paper Session 1</td></tr>
+          <tr><td>10:30–11:00</td><td>Coffee break</td></tr>
+          <tr><td>11:00–12:00</td><td>Paper Session 2 / Panel</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- COMMITTEES -->
+  <section id="committees">
+    <h2>Committees</h2>
+    <div class="card">
+      <h3>Organizing Committee</h3>
+      <ul>
+        <li>Name (Affiliation)</li>
+        <li>Name (Affiliation)</li>
+        <li>Name (Affiliation)</li>
+      </ul>
+
+      <h3>Program Committee</h3>
+      <ul>
+        <li>Name (Affiliation)</li>
+        <li>Name (Affiliation)</li>
+        <li>Name (Affiliation)</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footerwrap">
+    © <span id="y"></span> Workshop Title · Hosted on GitHub Pages
+  </div>
+</footer>
+
+<script>
+  // year
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  // active tab highlighting on scroll
+  const links = [...document.querySelectorAll("nav a")];
+  const sections = links.map(a => document.querySelector(a.getAttribute("href")));
+
+  const obs = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter(e => e.isIntersecting)
+      .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (!visible) return;
+
+    links.forEach(a => a.classList.remove("active"));
+    const id = "#" + visible.target.id;
+    const active = links.find(a => a.getAttribute("href") === id);
+    if (active) active.classList.add("active");
+  }, { rootMargin: "-40% 0px -55% 0px", threshold: [0.1, 0.2, 0.3, 0.4, 0.5] });
+
+  sections.forEach(s => s && obs.observe(s));
+</script>
+</body>
+</html>
